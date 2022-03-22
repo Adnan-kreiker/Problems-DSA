@@ -1940,3 +1940,30 @@ function fibonacciButtomUp(num) {
 
 const fastFib = fibonacci()
 console.log(fastFib(100))
+//===================================================================================================
+
+
+var getSmallestString = function(n, k) {
+  const str = []
+  
+
+  for(let i = 0; i < n; i++) {
+      str[i] = 'a'
+  }
+  
+  k = k - n;  24
+  
+  for(i = n - 1 ; i >= 0; i--) {
+      if(k == 0) {
+         return str.join('')
+      } else if( k < 25) {
+          str[i] = String.fromCharCode(97 + k)
+          k = 0
+      } else {
+          str[i] = String.fromCharCode(97 + 25)
+          k -= 25
+      }
+  }
+  
+  return str.join('')
+};
