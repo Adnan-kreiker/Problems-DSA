@@ -2008,3 +2008,35 @@ function capitalizeWords(wordsArr) {
 }
 
 console.log(capitalizeWords(arr))
+
+
+// stringifyNumbers
+// Write a function called stringifyNumbers which takes in an object and
+// finds all of the values which are numbers and converts them to strings.
+// Recursion would be a great way to solve this!
+
+const obj = {
+  num: 1,
+  test: [],
+  data: {
+    val: 4,
+    info: {
+      isRight: true,
+      random: 66
+    }
+  }
+};
+//===================================================================================================
+function stringifyNumbers(nestedObj){
+  let newObj = Object.assign({},nestedObj)
+  for(let key in nestedObj){
+    if(typeof newObj[key] === 'number') {
+      newObj[key] = newObj[key].toString()
+    } else if(typeof newObj[key] === 'object') {
+      newObj[key] = stringifyNumbers(newObj[key])
+    }
+  }
+  return newObj
+}
+
+console.log(stringifyNumbers(obj))
