@@ -1993,3 +1993,18 @@ function nestedEvenSum(nestedObj) {
   }
 
 console.log(nestedEvenSum(obj2))
+//===================================================================================================
+// capitalizeWords
+// Write a recursive function called capitalizeWords.
+// Given an array of words, return a new array containing each word capitalized.
+
+const arr = ['jax', 'garen', 'Darius']
+
+function capitalizeWords(wordsArr) {
+  if(!wordsArr.length) return wordsArr
+
+  const firstWord = wordsArr[0].toUpperCase()
+  return [firstWord].concat(capitalizeWords(wordsArr.slice(1)))
+}
+
+console.log(capitalizeWords(arr))
