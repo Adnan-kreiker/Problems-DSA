@@ -2073,3 +2073,22 @@ function collectStrings(obj){
 }
 
 console.log(collectStrings(obj1))
+
+===================================================================================
+function binarySearch(arr, val){
+  let p1 = 0
+  let p2 = arr.length - 1
+  while(p1 <= p2){
+  let m = Math.floor((p1 + p2) / 2)
+    if(arr[m] > val){
+      p2 = m -1
+    } else if(arr[m] < val) {
+      p1 = m + 1
+    } else return m
+  }
+  return -1
+}
+ 
+const arry = [1,2,3,4,5,6,7,8,9,10]
+
+console.log(binarySearch(arry,10)) 
