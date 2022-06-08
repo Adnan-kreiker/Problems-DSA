@@ -2092,3 +2092,25 @@ function binarySearch(arr, val){
 const arry = [1,2,3,4,5,6,7,8,9,10]
 
 console.log(binarySearch(arry,10)) 
+
+==========================================================================================
+function bubbleSort(arr) {
+  let outer =0
+  let inner = 0
+  for(let i = 0; i < arr.length; i++){
+      outer +=1
+    for(let j=0; j < arr.length - i -1 ; j++) { // it is important to subtract 1, otherwise we would get out of bounds
+        inner += 1;
+      console.log('length',arr.length - i )
+      console.log(arr[j],arr[j+1])
+      if(arr[j] > arr[j+1]) { 
+        [arr[j], arr[j+1]] = [arr[j+1], arr[j]]
+        console.log(arr[j],arr[j+1])
+      }
+    }  
+  } 
+  console.log({outer, inner})
+  return arr
+}
+const test = [3,2,1,0]
+console.log(bubbleSort(test)); 
