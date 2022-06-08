@@ -2097,16 +2097,20 @@ console.log(binarySearch(arry,10))
 function bubbleSort(arr) {
   let outer =0
   let inner = 0
+  let swap;
   for(let i = 0; i < arr.length; i++){
       outer +=1
+       swap = false
     for(let j=0; j < arr.length - i -1 ; j++) { // it is important to subtract 1, otherwise we would get out of bounds
         inner += 1;
       console.log('length',arr.length - i )
       console.log(arr[j],arr[j+1])
       if(arr[j] > arr[j+1]) { 
         [arr[j], arr[j+1]] = [arr[j+1], arr[j]]
+        swap = true
         console.log(arr[j],arr[j+1])
       }
+      if(!swap) break;
     }  
   } 
   console.log({outer, inner})
