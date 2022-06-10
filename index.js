@@ -2074,7 +2074,7 @@ function collectStrings(obj){
 
 console.log(collectStrings(obj1))
 
-===================================================================================
+// ===================================================================================
 function binarySearch(arr, val){
   let p1 = 0
   let p2 = arr.length - 1
@@ -2093,7 +2093,7 @@ const arry = [1,2,3,4,5,6,7,8,9,10]
 
 console.log(binarySearch(arry,10)) 
 
-==========================================================================================
+// ==========================================================================================
 function bubbleSort(arr) {
   let outer =0
   let inner = 0
@@ -2118,3 +2118,23 @@ function bubbleSort(arr) {
 }
 const test = [3,2,1,0]
 console.log(bubbleSort(test)); 
+
+// =================================================================================================================================================
+function selectionSort(arr) {
+  for(let i = 0; i < arr.length; i++){
+    let min = i
+    for(let j = i + 1 ; j < arr.length; j++) {
+      if(arr[j] < arr[min]){
+        min = j
+      }
+    }
+    if(arr[i] > arr[min]) {
+      console.log(arr[i], arr[min]);
+      [arr[i], arr[min]] = [arr[min], arr[i]]
+    }
+  }
+  return arr 
+} 
+
+
+console.log(selectionSort([0,2,34,22,10,19,17]))
