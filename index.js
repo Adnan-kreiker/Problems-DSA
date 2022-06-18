@@ -1,5 +1,3 @@
-// 'use strict'
-
 
 // if(!Object.is || true) {
 //   Object.is = function ObjectIs(x, y) {
